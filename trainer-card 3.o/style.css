@@ -1,0 +1,225 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0e6ea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card-wrapper {
+  perspective: 1300px;
+}
+
+.trainer-card {
+  width: 700px;
+  height: 500px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s ease;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #585052ff, #C7F1F8ff, #C4EFF7ff, #E2F7FBff, #A30615ff, #CFF2F8ff, #AEE4EEff, #4A2E32ff);
+  background-size: 800% 800%;
+  animation: pulse 8s linear infinite alternate;
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes pulse {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+.card-wrapper.flipped .trainer-card {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  border: 3px solid #000;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+.left-section {
+  width: 60%;
+  padding: 12px;
+  
+  background-size: cover;
+  overflow-y: auto;
+}
+
+.right-section {
+  width: 40%;
+  background-color: rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 8px;
+  overflow-y: auto;
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: black;
+}
+
+.info {
+  background-color: rgba(255, 255, 255, 0.7);
+  margin: 4px 0;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+.highlighted {
+  background-color: #fce6ec;
+  border: 1px solid #fbd3e9;
+}
+
+.large {
+  min-height: 60px;
+}
+
+.on-hand {
+  margin-top: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.party {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.large-party .pokemon img {
+  width: 70px;
+  height: 70px;
+}
+
+.pokemon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80px;
+}
+
+.pokemon img {
+  width: 60px;
+  height: 60px;
+  padding: 6px;
+  border-radius: 10px;
+  border: 2px solid #ffcad4;
+  background: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pokemon img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+}
+
+.pokemon span {
+  margin-top: 4px;
+  font-size: 12px;
+  color: #333;
+  font-weight: 600;
+  text-align: center;
+}
+
+.badges {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.badges img {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.badges img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 6px rgba(255, 203, 5, 0.8);
+}
+
+.badge-info {
+  margin-top: 10px;
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+  color: #1a1a1a;
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 8px;
+}
+
+.trainer-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 2px solid #fff;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.flip-tip {
+  text-align: center;
+  margin-top: 6px;
+  font-size: 12px;
+  color: #555;
+  font-style: italic;
+}
+
+/*skill wala section*/
+.skills{
+  margin-top: 12px;
+  padding: 10px;
+  background: transparent;
+  font-size: 13px;
+  border-radius: 10px;
+  border: 2px dashed #d9d2e9;
+  
+}
+.skills h3 {
+font-size: 15px;
+margin-bottom: 6px;
+color: #4A2E32;
+text-align: center;
+}
+.skills ul {
+  list-style: none;
+  padding-left: 0;
+
+}
+
+.skills ul li {
+  padding: 4px 0;
+  font-weight: 500;
+  color: #333;
+
+}
+
+  

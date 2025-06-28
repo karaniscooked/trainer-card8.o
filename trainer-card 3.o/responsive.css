@@ -1,0 +1,67 @@
+/* responsive.css */
+
+/* For tablets and smaller devices */
+@media (max-width: 1024px) {
+  .trainer-card {
+    width: 90vw;
+    height: auto;
+  }
+
+  .card-front, .card-back {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .left-section, .right-section {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .right-section {
+    align-items: center;
+  }
+
+  .trainer-img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .party.large-party {
+    gap: 15px;
+  }
+}
+
+/* For phones */
+@media (max-width: 600px) {
+  .card-title {
+    font-size: 14px;
+  }
+
+  .info {
+    font-size: 12px;
+    padding: 5px 8px;
+  }
+
+  .pokemon img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .pokemon {
+    width: 70px;
+  }
+
+  .badges img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .badge-info {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+
+  .flip-tip {
+    font-size: 11px;
+  }
+}
