@@ -1,0 +1,1 @@
+# trainer-card8.o
